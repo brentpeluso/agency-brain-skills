@@ -1,0 +1,65 @@
+<!-- Global Styles & Scripts for GoHighLevel (Book A Call Page) -->
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Montserrat:wght@700;800&amp;display=swap"
+    rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#142c44",
+                    secondary: "#4a7c59",
+                    accent: "#e9f2eb",
+                    "background-light": "#fcfdfd",
+                    "background-dark": "#0f172a",
+                },
+                fontFamily: {
+                    display: ["Montserrat", "sans-serif"],
+                    sans: ["Inter", "sans-serif"],
+                },
+                borderRadius: {
+                    DEFAULT: "0.75rem",
+                },
+            },
+        },
+    };
+</script>
+<style type="text/tailwindcss">
+    :root {
+        --primary-navy: #142c44;
+        --brand-green: #4a7c59;
+        --brand-green-hover: #3d664a;
+        --accent-bg: #f8fafc;
+    }
+    @layer base {
+        .calendar-shadow {
+            box-shadow: 0 10px 50px -12px rgba(20, 44, 68, 0.12);
+        }
+        .dark .calendar-shadow {
+            box-shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+    }
+</style>
+<!-- Theme Toggle Script to be placed in Footer or Body usage -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('themeToggle');
+        if (toggleBtn) {
+            const icon = toggleBtn.querySelector('span');
+            toggleBtn.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+                if (document.documentElement.classList.contains('dark')) {
+                    icon.innerText = 'light_mode';
+                } else {
+                    icon.innerText = 'dark_mode';
+                }
+            });
+        }
+    });
+</script>

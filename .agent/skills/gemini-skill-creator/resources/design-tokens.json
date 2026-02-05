@@ -1,0 +1,68 @@
+{
+  "meta": {
+    "brand_name": "Remodeler Booked",
+    "description": "Core design tokens for Home Remodeler Marketing Agency",
+    "last_updated": "2026-02-04"
+  },
+  "colors": {
+    "primary": {
+      "DEFAULT": "#142B47",
+      "description": "Agency Navy - Used for headers, main text, navbar, and trust indicators.",
+      "hover": "#0F1F33",
+      "foreground": "#FFFFFF"
+    },
+    "secondary": {
+      "DEFAULT": "#437453",
+      "description": "Growth Green - Used for Primary CTAs (Book Now), success states, active states, and growth indicators.",
+      "hover": "#365D42",
+      "foreground": "#FFFFFF"
+    },
+    "background": {
+      "DEFAULT": "#FFFFFF",
+      "light": "#F8FAFC",
+      "dark": "#0F172A",
+      "description": "Clean white for readability, light slate for alternate sections."
+    },
+    "text": {
+      "DEFAULT": "#142B47",
+      "muted": "#64748B",
+      "heading": "#142B47"
+    },
+    "status": {
+      "success": "#437453",
+      "error": "#DC2626",
+      "warning": "#F59E0B"
+    }
+  },
+  "typography": {
+    "headings": {
+      "family": ["Poppins", "sans-serif"],
+      "weight": "600-800",
+      "transform": "none",
+      "note": "Bold, modern display font for headlines and navigation."
+    },
+    "body": {
+      "family": ["Inter", "sans-serif"],
+      "weight": "400-600",
+      "line_height": "1.6"
+    }
+  },
+  "ui": {
+    "border_radius": "0.5rem",
+    "button_padding": "py-3.5 px-8",
+    "container_max_width": "max-w-7xl",
+    "navbar_height": "h-24"
+  },
+  "tailwind_config": {
+    "colors": {
+      "primary": "#142B47",
+      "secondary": "#437453",
+      "background-light": "#F8FAFC",
+      "background-dark": "#0F172A"
+    },
+    "fontFamily": {
+      "sans": ["Inter", "sans-serif"],
+      "display": ["Poppins", "sans-serif"]
+    }
+  }
+}

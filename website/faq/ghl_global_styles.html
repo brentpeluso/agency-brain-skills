@@ -1,0 +1,60 @@
+<!-- GHL Global Styles for FAQ Page -->
+<!-- Paste this in Settings > Custom Code > Header Code -->
+
+<!-- Google Fonts: Inter (Body) + Poppins (Display) -->
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#142B47",
+                    secondary: "#437453",
+                    "background-light": "#F8FAFC",
+                    "background-dark": "#0F172A"
+                },
+                fontFamily: {
+                    sans: ["Inter", "sans-serif"],
+                    display: ["Poppins", "sans-serif"]
+                },
+            },
+        },
+    };
+</script>
+
+<style type="text/tailwindcss">
+    .glass-nav {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    
+    .nav-link { position: relative; }
+    .nav-link::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 2px; 
+        bottom: -2px; 
+        left: 0; 
+        background-color: #437453; 
+        transition: width 0.3s; 
+    }
+    .nav-link:hover::after { width: 100%; }
+    
+    .faq-icon { transition: transform 0.3s ease; }
+    .rotate-45 { transform: rotate(45deg); }
+    
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>

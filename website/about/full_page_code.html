@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | Remodel Booked Marketing Agency</title>
+    <meta
+        content="Specialized marketing for kitchen and bathroom remodeling businesses. Learn about the team behind Remodel Booked."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0a1d37", // Specific Deep Navy from Remodel Booked brand
+                        secondary: "#2d7a4d", // Specific Professional Green from Remodel Booked brand
+                        accent: "#e8f3ee",
+                        "background-light": "#ffffff",
+                        "background-dark": "#020617",
+                    },
+                    fontFamily: {
+                        display: ["Plus Jakarta Sans", "sans-serif"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        .glass-nav {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0a1d37 0%, #2d7a4d 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-link {
+            @apply relative font-medium transition-colors hover:text-secondary;
+        }
+        .nav-link::after {
+            content: '';
+            @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary transition-all duration-300;
+        }
+        .nav-link:hover::after {
+            @apply w-full;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-slate-900 bg-background-light dark:bg-background-dark dark:text-slate-100 antialiased">
+    <nav
+        class="fixed top-0 w-full z-50 glass-nav border-b border-slate-200/60 dark:border-slate-800/60 bg-white/90 dark:bg-slate-950/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <img alt="Remodel Booked Logo" class="h-10 w-auto"
+                        src="https://storage.googleapis.com/msgsndr/uhgOFBZN018g6VXibDYj/media/697185b210cc276df5ecd936.png" />
+                </div>
+                <div class="hidden md:flex space-x-10 items-center">
+                    <a class="nav-link" href="#">Services</a>
+                    <a class="nav-link" href="#">Case Studies</a>
+                    <a class="text-secondary font-bold" href="#">About Us</a>
+                    <a class="bg-primary text-white px-7 py-3 rounded-full font-bold hover:bg-secondary transition-all shadow-lg shadow-primary/10 flex items-center gap-2"
+                        href="#">
+                        Book a Call
+                        <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button class="p-2 text-primary dark:text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <header class="relative pt-32 pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-slate-50 dark:bg-slate-950">
+        <div
+            class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_70%_20%,rgba(45,122,77,0.08),transparent_50%),radial-gradient(circle_at_30%_80%,rgba(10,29,55,0.08),transparent_50%)]">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <span
+                class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/10 text-secondary text-xs font-bold tracking-widest uppercase mb-8 border border-secondary/20">
+                <span class="w-2 h-2 rounded-full bg-secondary"></span>
+                Built by Industry Insiders
+            </span>
+            <h1
+                class="text-4xl md:text-6xl lg:text-7xl font-extrabold font-display leading-[1.1] mb-8 text-primary dark:text-white">
+                We Don't Just Build Campaigns.<br />
+                <span class="text-secondary">We Scale Remodeling Empires.</span>
+            </h1>
+            <p class="max-w-3xl mx-auto text-xl text-slate-600 dark:text-slate-400 mb-12 leading-relaxed">
+                Remodel Booked was founded on a simple realization: generalist agencies don't understand the difference
+                between a handyman job and a <span class="text-primary font-semibold dark:text-slate-200">$60k kitchen
+                    overhaul</span>.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-5">
+                <a class="flex items-center justify-center gap-3 bg-primary text-white px-8 py-5 rounded-2xl font-bold text-lg hover:bg-secondary transition-all shadow-xl shadow-primary/10"
+                    href="#story">
+                    Learn Our Story <span class="material-symbols-outlined">expand_more</span>
+                </a>
+                <a class="flex items-center justify-center gap-3 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-8 py-5 rounded-2xl font-bold text-lg hover:border-secondary transition-all shadow-sm"
+                    href="#">
+                    View Case Studies
+                </a>
+            </div>
+        </div>
+    </header>
+    <section class="py-24 lg:py-40 bg-white dark:bg-slate-950" id="story">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-secondary/10 rounded-3xl blur-3xl"></div>
+                    <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+                        <img alt="High-end Kitchen Remodel" class="w-full h-auto object-cover aspect-[4/3]"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV7ZJSuuesyYQ7Hlla6_RycR0XVMCx1r1imFMJEgrVgfwe_C2Bpc-QDTjexL1o4S_TU05IO4zjlZmYBNceNXI89LnrvTMds6ONkIxzFSEoil9SKPIKwi-C_sklq6CsaLttKqAYc9piRyH1WmkAG_GKia8AWzr43AHjLxTVIlGmDLdXapvdYnkU5gPOtGju-p0fPmVwp50CFoGP_Mb-YAoO5700rP2aa9wd3DivHs3kOqZHKtKw9c4LBEJKnY_UvN70-Mmajn29PCc" />
+                    </div>
+                    <div
+                        class="absolute -bottom-8 -right-8 bg-white dark:bg-slate-900 p-8 rounded-2xl shadow-2xl border border-slate-100 dark:border-slate-800 hidden sm:block">
+                        <div class="flex items-center gap-5">
+                            <div class="p-4 bg-secondary/10 rounded-xl">
+                                <span class="material-symbols-outlined text-secondary text-3xl">verified</span>
+                            </div>
+                            <div>
+                                <p class="text-lg font-bold text-primary dark:text-white leading-tight">Specialized Only
+                                </p>
+                                <p class="text-sm text-slate-500 font-medium">Kitchen &amp; Bath Niche</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-8">
+                    <div class="inline-block h-1.5 w-16 bg-secondary rounded-full"></div>
+                    <h2 class="text-3xl md:text-5xl font-bold font-display text-primary dark:text-white leading-tight">
+                        Born from the Sawdust</h2>
+                    <div class="space-y-6 text-slate-600 dark:text-slate-400 leading-relaxed text-lg">
+                        <p>
+                            Before we were marketers, we were deeply embedded in the construction world. We saw
+                            incredible craftsmen struggling to find quality leads, wasting thousands on "SEO gurus" who
+                            didn't know the difference between a load-bearing wall and a backsplash.
+                        </p>
+                        <p>
+                            In 2018, we decided to change that. We built <span class="text-secondary font-bold">Remodel
+                                Booked</span> with one goal: To bridge the gap between high-end remodeling expertise and
+                            cutting-edge digital marketing.
+                        </p>
+                        <p>
+                            We don't work with plumbers, lawyers, or dentists. We work exclusively with <span
+                                class="text-primary font-bold dark:text-white">kitchen and bath remodelers</span>. This
+                            hyper-focus allows us to know your customers' pain points and exactly what makes a homeowner
+                            click "Book an Estimate."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 bg-slate-50 dark:bg-slate-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-bold font-display text-primary dark:text-white mb-6">Why Specialized
+                Matters</h2>
+            <p class="text-xl text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">The difference between "leads" and
+                "profitable contracts."</p>
+        </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-8">
+            <div
+                class="bg-white dark:bg-slate-800 p-10 rounded-3xl border border-slate-200 dark:border-slate-700 opacity-80">
+                <div class="flex items-center gap-4 mb-8">
+                    <span class="material-symbols-outlined text-slate-400 text-3xl">public</span>
+                    <h3 class="text-2xl font-bold text-slate-500">Generalist Agency</h3>
+                </div>
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4 text-slate-500">
+                        <span class="material-symbols-outlined text-red-500 text-xl">cancel</span>
+                        <span class="text-base font-medium">Generic "Home Service" ads that attract tire-kickers.</span>
+                    </li>
+                    <li class="flex items-start gap-4 text-slate-500">
+                        <span class="material-symbols-outlined text-red-500 text-xl">cancel</span>
+                        <span class="text-base font-medium">They don't know the difference between quartz and
+                            granite.</span>
+                    </li>
+                    <li class="flex items-start gap-4 text-slate-500">
+                        <span class="material-symbols-outlined text-red-500 text-xl">cancel</span>
+                        <span class="text-base font-medium">Slow results while they "learn your industry."</span>
+                    </li>
+                </ul>
+            </div>
+            <div
+                class="bg-white dark:bg-slate-800 p-10 rounded-3xl border-2 border-secondary shadow-2xl relative overflow-hidden transform hover:-translate-y-1 transition-all">
+                <div
+                    class="absolute top-0 right-0 bg-secondary text-white text-[10px] font-bold px-5 py-1.5 rounded-bl-2xl uppercase tracking-[0.2em]">
+                    The Advantage</div>
+                <div class="flex items-center gap-4 mb-8">
+                    <img alt="Logo Mark" class="h-8 w-auto"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkrJyD7KN1c3IsP2dfEdijCoftD_1GKkUW70coUbDExBloNGHcIeoIWqLIKW6YNhVaTgHxs4z2V7b20al3W2_LxtAmYPyuuqcGur5DAljc785R7UBqubaL7YuJl9oWTCpwpbj2T_VikxGipfgbBVJEI-fca91lvUoO0ZoX-KiOgRaRzXSbVA9mZQAK4KWfw3wgUN4Lt2P0yFCAQ1IDj4_6hPaqPAJMqw4plz_tVzHxdDwrVNS5ZUZ-WgZTV9FGthqae9Rz0_kXiyU" />
+                    <h3 class="text-2xl font-bold text-primary dark:text-white">Remodel Booked</h3>
+                </div>
+                <ul class="space-y-5">
+                    <li class="flex items-start gap-4 text-slate-800 dark:text-slate-200">
+                        <span class="material-symbols-outlined text-secondary text-2xl font-bold">check_circle</span>
+                        <span class="text-base font-bold">Ad copy proven to convert $30k+ project leads.</span>
+                    </li>
+                    <li class="flex items-start gap-4 text-slate-800 dark:text-slate-200">
+                        <span class="material-symbols-outlined text-secondary text-2xl font-bold">check_circle</span>
+                        <span class="text-base font-bold">Deep understanding of kitchen &amp; bath buyer
+                            psychology.</span>
+                    </li>
+                    <li class="flex items-start gap-4 text-slate-800 dark:text-slate-200">
+                        <span class="material-symbols-outlined text-secondary text-2xl font-bold">check_circle</span>
+                        <span class="text-base font-bold">Ready-to-go systems that generate ROI in week 1.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="py-24 lg:py-40 bg-primary text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/graphy.png')]">
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+            <span class="material-symbols-outlined text-secondary text-6xl mb-10">rocket_launch</span>
+            <h2 class="text-4xl md:text-5xl font-extrabold font-display mb-10 leading-[1.3]">"Our mission is to help 500
+                remodeling businesses double their annual revenue by 2026."</h2>
+            <div class="h-1.5 w-24 bg-secondary mx-auto mb-10 rounded-full"></div>
+            <p class="text-slate-300 text-xl font-medium tracking-wide">We don't track clicks or likes. We track Signed
+                Contracts.</p>
+        </div>
+    </section>
+    <section class="py-24 lg:py-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-24 items-center">
+                <div class="lg:w-2/5">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-2 bg-secondary/30 rounded-3xl blur-xl transition-all group-hover:bg-secondary/40">
+                        </div>
+                        <img alt="Marcus Sterling - Founder"
+                            class="relative rounded-3xl shadow-2xl border-8 border-white dark:border-slate-800 object-cover w-full grayscale-[0.3] hover:grayscale-0 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPuyKthpwThq1arqGE8XKqqR7mAI9eY3dxeVXy53keQM4yQY9aMS73qX-M01ua_TlZhs0oQV2FGsvbMVvOsNzDypdughGRtSMdIREjxTrnrP5z0xngN5OgSmfUF1t6Sy_BbmcMCG79LTET1Z_iOW8MuZfoy5PNd1mdjC_iGZ38sjQV6hkdWjpD98AtEkALrCy3MYZf1VJV3SOcp42lZCT2eWbGARyTwwo69NG9A6kT1LjMOzFgEw7U1ZUF-PNqp2mxYvPKPPdIpzo" />
+                        <div
+                            class="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-white dark:bg-slate-900 px-8 py-4 rounded-2xl shadow-xl border border-slate-100 dark:border-slate-800">
+                            <p class="text-primary dark:text-white font-extrabold text-xl whitespace-nowrap">Marcus
+                                Sterling</p>
+                            <p class="text-secondary text-sm font-bold uppercase tracking-widest text-center mt-1">
+                                Founder &amp; CEO</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-3/5">
+                    <h3
+                        class="text-3xl font-bold font-display text-primary dark:text-white mb-8 border-l-4 border-secondary pl-6">
+                        A Personal Note to Business Owners</h3>
+                    <div class="space-y-6 text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        <p>
+                            Running a remodeling business is hard. You're managing crews, dealing with suppliers, and
+                            ensuring every tile is laid perfectly. Marketing shouldn't be another headache on your
+                            plate.
+                        </p>
+                        <p>
+                            When I started Remodel Booked, I wanted to build the partner I wish I had—an agency that
+                            actually speaks the language, understands the margins, and delivers transparent, undeniable
+                            results.
+                        </p>
+                        <p>
+                            If you're tired of "lead providers" selling the same bad leads to 10 other contractors,
+                            let's talk. We'll show you what an exclusive, high-intent pipeline looks like.
+                        </p>
+                        <div class="pt-8 flex items-center gap-4">
+                            <p class="font-display font-extrabold text-primary dark:text-white italic text-3xl">— Marcus
+                                Sterling</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pb-24 lg:pb-40 px-4">
+        <div
+            class="max-w-7xl mx-auto bg-primary rounded-[3rem] p-10 md:p-20 text-center relative overflow-hidden shadow-2xl">
+            <div class="absolute top-0 right-0 w-96 h-96 bg-secondary/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
+            <div class="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full -ml-48 -mb-48 blur-3xl"></div>
+            <div class="relative z-10">
+                <h2 class="text-4xl md:text-6xl font-extrabold font-display text-white mb-8">Ready to Fill Your <br
+                        class="hidden md:block" />Project Calendar?</h2>
+                <p class="text-xl text-slate-300 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
+                    Stop guessing where your next kitchen remodel is coming from. Book a free 15-minute Strategy Call
+                    and we'll show you our blueprint for scaling.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-8">
+                    <a class="w-full sm:w-auto bg-secondary text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-primary transition-all shadow-2xl flex items-center justify-center gap-3"
+                        href="#">
+                        Book My Strategy Call <span class="material-symbols-outlined font-bold">arrow_forward</span>
+                    </a>
+                    <div class="flex items-center gap-3 text-slate-300 font-semibold">
+                        <span class="material-symbols-outlined text-secondary">schedule</span>
+                        <span>15 Minutes • No Obligation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-slate-50 dark:bg-slate-950 pt-24 pb-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
+                <div class="lg:col-span-1">
+                    <img alt="Remodel Booked Logo" class="h-10 w-auto mb-8"
+                        src="https://storage.googleapis.com/msgsndr/uhgOFBZN018g6VXibDYj/media/697185b210cc276df5ecd936.png" />
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed mb-8 max-w-xs">
+                        The #1 marketing partner for kitchen and bathroom remodeling professionals across North America.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-primary dark:text-slate-300 hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">share</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-primary dark:text-slate-300 hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">camera</span>
+                        </a>
+                        <a class="w-10 h-10 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-primary dark:text-slate-300 hover:bg-secondary hover:text-white hover:border-secondary transition-all"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl">play_circle</span>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-primary dark:text-white font-bold text-lg mb-8">Services</h4>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 font-medium">
+                        <li><a class="hover:text-secondary transition-colors" href="#">Google Ads for Remodelers</a>
+                        </li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Kitchen Lead Generation</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Bathroom Lead Generation</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Conversion Systems</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-primary dark:text-white font-bold text-lg mb-8">Company</h4>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 font-medium">
+                        <li><a class="text-secondary font-bold" href="#">About Us</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Case Studies</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Careers</a></li>
+                        <li><a class="hover:text-secondary transition-colors" href="#">Partner Program</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-primary dark:text-white font-bold text-lg mb-8">Contact</h4>
+                    <ul class="space-y-4 text-slate-500 dark:text-slate-400 font-medium">
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl">mail</span>
+                            hello@remodelbooked.com
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="material-symbols-outlined text-secondary text-xl">call</span>
+                            (888) 555-0123
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-slate-500 dark:text-slate-400 font-medium italic">© 2024 Remodel Booked. Built
+                    for Builders.</p>
+                <div class="flex gap-10 text-sm font-bold text-primary dark:text-slate-300">
+                    <a class="hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-secondary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

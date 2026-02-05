@@ -1,0 +1,86 @@
+<!-- 
+  REMODEL BOOKED - Standard GHL Global Styles Template
+  =====================================================
+  Paste this in: Settings > Custom Code > Header Code
+  
+  This ensures consistent styling across all pages.
+-->
+
+<!-- Google Fonts: Inter (Body) + Poppins (Display) -->
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+
+<!-- Material Symbols (Icons) -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+        darkMode: "class",
+        theme: {
+            extend: {
+                colors: {
+                    primary: "#142B47",         // Navy Blue
+                    secondary: "#437453",       // Growth Green
+                    "background-light": "#F8FAFC",
+                    "background-dark": "#0F172A"
+                },
+                fontFamily: {
+                    sans: ["Inter", "sans-serif"],      // Body text
+                    display: ["Poppins", "sans-serif"]  // Headings
+                },
+                borderRadius: {
+                    DEFAULT: "0.5rem",
+                    'xl': '1rem',
+                },
+            },
+        },
+    };
+</script>
+
+<style type="text/tailwindcss">
+    /* Glassmorphism navbar */
+    .glass-nav {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    
+    /* Hero gradient background */
+    .hero-gradient {
+        background: linear-gradient(135deg, rgba(20, 43, 71, 0.05) 0%, rgba(67, 116, 83, 0.05) 100%);
+    }
+    
+    /* Nav link hover underline effect */
+    .nav-link { 
+        position: relative; 
+    }
+    .nav-link::after { 
+        content: ''; 
+        position: absolute; 
+        width: 0; 
+        height: 2px; 
+        bottom: -2px; 
+        left: 0; 
+        background-color: #437453; 
+        transition: width 0.3s; 
+    }
+    .nav-link:hover::after { 
+        width: 100%; 
+    }
+    
+    /* Material symbols default settings */
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+</style>
+
+<script>
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+    }
+</script>

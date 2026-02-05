@@ -1,0 +1,96 @@
+/* =========================================
+   Remodeler Booked - Global Design System
+   ========================================= */
+
+:root {
+    /* --- Brand Colors --- */
+    --rb-primary: #4D8B55;       /* Growth Green */
+    --rb-primary-hover: #3D6F44; 
+    --rb-secondary: #1B2F45;     /* Agency Navy */
+    --rb-secondary-light: #2C4B6B;
+    
+    /* --- Neutrals --- */
+    --rb-bg-white: #FFFFFF;
+    --rb-bg-alt: #F4F6F8;        /* Light Grey-Blue */
+    --rb-text-main: #1B2F45;
+    --rb-text-muted: #546E7A;
+    
+    /* --- UI Tokens --- */
+    --rb-radius: 8px;
+    --rb-shadow: 0 4px 6px -1px androidx.core.graphics.ColorUtils.setAlphaComponent(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   Typography
+   ========================================= */
+
+/* Import Fonts (Ensure these are selected in GHL Typography settings too) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--rb-text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--rb-secondary);
+    font-weight: 800; /* ExtraBold for strong brand presence */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.25rem; }
+h3 { font-size: 1.5rem; }
+
+/* =========================================
+   Components
+   ========================================= */
+
+/* --- Buttons --- */
+/* Apply this class to your main CTA buttons */
+.rb-btn-primary {
+    background-color: var(--rb-primary) !important;
+    color: white !important;
+    font-family: 'Montserrat', sans-serif !important;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: var(--rb-radius) !important;
+    padding: 15px 30px !important;
+    box-shadow: var(--rb-shadow);
+    transition: all 0.3s ease;
+    border: none !important;
+}
+
+.rb-btn-primary:hover {
+    background-color: var(--rb-primary-hover) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Sections --- */
+.rb-section-white {
+    background-color: var(--rb-bg-white);
+    padding: 80px 0;
+}
+
+.rb-section-alt {
+    background-color: var(--rb-bg-alt);
+    padding: 80px 0;
+}
+
+/* --- Trust Badges / Cards --- */
+.rb-card {
+    background: white;
+    border-radius: var(--rb-radius);
+    padding: 2rem;
+    box-shadow: var(--rb-shadow);
+    border: 1px solid #E2E8F0;
+}
+
+/* --- Utility --- */
+.text-growth-green { color: var(--rb-primary); }
+.text-agency-navy { color: var(--rb-secondary); }

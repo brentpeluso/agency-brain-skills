@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# Tailwind CLI executable (too large for GitHub)
+website/tailwindcss.exe
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

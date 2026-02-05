@@ -1,0 +1,120 @@
+<!-- 
+    ===================================================
+    REMODELER BOOKED - HERO SECTION (Drop-in Module)
+    ===================================================
+    INSTRUCTIONS:
+    1. Dragon a "Custom HTML" element into your GHL page at the very top.
+    2. Paste this ENTIRE code block into it.
+    3. Save and Preview.
+    
+    TO EDIT TEXT: Look for the comments like <!-- EDIT HEADLINE BELOW -->
+-->
+
+<style>
+    /* Scoped CSS for Hero Section */
+    .rb-hero-wrapper {
+        position: relative;
+        background: linear-gradient(rgba(27, 47, 69, 0.85), rgba(27, 47, 69, 0.7)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80'); /* Kitchen Background */
+        background-size: cover;
+        background-position: center;
+        padding: 100px 20px 120px;
+        text-align: center;
+        color: #ffffff;
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    .rb-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    /* Typography */
+    .rb-headline {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: -0.5px;
+    }
+
+    .rb-subheadline {
+        font-size: 22px;
+        line-height: 1.6;
+        color: #E2E8F0;
+        margin-bottom: 40px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Button */
+    .rb-hero-btn {
+        display: inline-block;
+        background-color: #4D8B55; /* Growth Green */
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 20px 40px;
+        border-radius: 8px;
+        text-decoration: none;
+        box-shadow: 0 4px 14px 0 rgba(77, 139, 85, 0.39);
+        transition: transform 0.2s ease, background 0.2s;
+        border: 2px solid #4D8B55;
+    }
+
+    .rb-hero-btn:hover {
+        transform: translateY(-2px);
+        background-color: #3D6F44;
+        border-color: #3D6F44;
+        color: white;
+    }
+
+    /* Trust Strip */
+    .rb-trust-strip {
+        margin-top: 60px;
+        opacity: 0.7;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+        .rb-headline { font-size: 32px; }
+        .rb-subheadline { font-size: 18px; }
+        .rb-hero-btn { width: 100%; box-sizing: border-box; }
+        .rb-hero-wrapper { padding: 60px 20px; }
+    }
+</style>
+
+<div class="rb-hero-wrapper">
+    <div class="rb-container">
+        
+        <!-- EDIT HEADLINE BELOW -->
+        <h1 class="rb-headline">
+            Stop Chasing Shared Leads.<br>
+            <span style="color: #4D8B55;">Start Booking Remodels.</span>
+        </h1>
+
+        <!-- EDIT SUBHEADLINE BELOW -->
+        <p class="rb-subheadline">
+            The all-in-one growth engine designed for Kitchen & Bath pros who are tired of "tire-kickers" and empty calendars.
+        </p>
+
+        <!-- CTA BUTTON -->
+        <!-- Link -> #popup opens the GHL popup usually -->
+        <a href="#popup" class="rb-hero-btn">
+            Get My Growth Plan
+        </a>
+        
+        <div style="margin-top: 10px; font-size: 14px; opacity: 0.8;">
+            ✅ 100% Exclusive Leads • No Monthly Retainers
+        </div>
+
+    </div>
+</div>

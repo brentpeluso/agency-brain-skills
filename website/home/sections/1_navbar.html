@@ -1,0 +1,56 @@
+<!-- NAVBAR SECTION (Home Page) -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="flex justify-between items-center h-24">
+
+            <!-- LOGO -->
+            <a href="https://remodelbooked.com/home" class="flex-shrink-0 flex items-center cursor-pointer">
+                <img alt="Remodel Booked" class="h-10 md:h-12 w-auto object-contain"
+                    src="https://storage.googleapis.com/msgsndr/uhgOFBZN018g6VXibDYj/media/697185b210cc276df5ecd936.png" />
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <div class="hidden md:flex space-x-10 items-center">
+                <a class="nav-link text-sm font-bold text-[#437453] tracking-wide uppercase font-display border-b-2 border-[#437453] pb-1"
+                    href="https://remodelbooked.com/home">Home</a>
+                <a class="nav-link text-sm font-bold text-[#142B47] tracking-wide uppercase hover:text-[#437453] transition-colors font-display"
+                    href="https://remodelbooked.com/about-us">About Us</a>
+                <a class="nav-link text-sm font-bold text-[#142B47] tracking-wide uppercase hover:text-[#437453] transition-colors font-display"
+                    href="https://remodelbooked.com/who-we-serve">Who We Serve</a>
+                <a class="nav-link text-sm font-bold text-[#142B47] tracking-wide uppercase hover:text-[#437453] transition-colors font-display"
+                    href="https://remodelbooked.com/faq">FAQ</a>
+
+                <a class="bg-[#142B47] text-white px-8 py-3.5 rounded-md text-sm font-bold hover:bg-[#437453] transition-all shadow-lg tracking-wide font-display uppercase"
+                    href="https://get.remodelbooked.com/app">
+                    Book A Free Call
+                </a>
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <div class="md:hidden">
+                <button onclick="document.getElementById('mobile-menu-home').classList.toggle('hidden')"
+                    class="text-[#142B47] focus:outline-none p-2">
+                    <span class="material-symbols-outlined text-4xl">menu</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu-home"
+        class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full left-0 shadow-xl">
+        <div class="px-6 py-8 space-y-4 flex flex-col">
+            <a href="https://remodelbooked.com/home"
+                class="text-lg font-bold text-[#437453] font-display uppercase">Home</a>
+            <a href="https://remodelbooked.com/about-us"
+                class="text-lg font-bold text-[#142B47] font-display uppercase">About Us</a>
+            <a href="https://remodelbooked.com/who-we-serve"
+                class="text-lg font-bold text-[#142B47] font-display uppercase">Who We Serve</a>
+            <a href="https://remodelbooked.com/faq"
+                class="text-lg font-bold text-[#142B47] font-display uppercase">FAQ</a>
+            <a href="https://get.remodelbooked.com/app"
+                class="bg-[#142B47] text-white text-center py-4 rounded-md text-lg font-bold font-display uppercase mt-4">Book
+                A Free Call</a>
+        </div>
+    </div>
+</nav>
