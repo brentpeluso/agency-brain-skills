@@ -1,0 +1,88 @@
+<!-- ============================================
+     REMODEL BOOKED - SIMPLIFIED HEADER CODE
+     Uses Tailwind Play CDN (No Build Step!)
+     ============================================ -->
+
+<!-- Google Fonts: Inter (Body) + Poppins (Display) -->
+<link href="https://fonts.googleapis.com" rel="preconnect" />
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap"
+    rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+<!-- Tailwind Play CDN - Generates ALL utilities automatically! -->
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+<!-- Custom Theme & Brand Styles -->
+<style type="text/tailwindcss">
+    @theme {
+        /* Brand Colors */
+        --color-primary: #142B47;
+        --color-secondary: #437453;
+    }
+</style>
+
+<style>
+    /* Font Assignments */
+    body,
+    html {
+        font-family: 'Inter', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .font-display {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+
+    /* Fixed Logo Sizing */
+    img[src*="697185b210cc276df5ecd936.png"] {
+        height: 2.5rem !important;
+        width: auto !important;
+        object-fit: contain !important;
+    }
+
+    @media (min-width: 768px) {
+        img[src*="697185b210cc276df5ecd936.png"] {
+            height: 3rem !important;
+        }
+    }
+
+    /* Custom Glass Nav */
+    .glass-nav {
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+    }
+
+    /* Nav Link Underline Animation */
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link:after {
+        content: "";
+        background-color: #437453;
+        width: 0;
+        height: 2px;
+        transition: width .3s;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+    }
+
+    .nav-link:hover:after {
+        width: 100%;
+    }
+
+    /* Material Symbols */
+    .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+</style>
