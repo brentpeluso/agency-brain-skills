@@ -1,31 +1,40 @@
 <!-- ============================================
-     REMODEL BOOKED - PRODUCTION HEADER V3
-     (Anti-FOUT + Inline Critical CSS + Mobile Fixes)
+     REMODEL BOOKED - PRODUCTION HEADER V4
+     Anti-FOUT + Inline Critical CSS + Mobile Fixes
+     
+     REVIEW NOTES:
+     - Anti-FOUT script hides <html> instantly, reveals on font-ready or 500ms timeout
+     - ALL brand color classes (bg, text, border, hover, shadow) inlined for instant render
+     - Nav-link underline animation included
+     - CDN loaded async as non-blocking backup
+     - Mobile typography capped at 2.25rem for h1
      ============================================ -->
 
-<!-- LAYER 1: ANTI-FOUT SCRIPT -->
-<!-- This script runs IMMEDIATELY to prevent the "flash" by hiding the page 
-     until critical styles and fonts are ready. -->
+<!-- LAYER 1: ANTI-FOUT SCRIPT (runs immediately, before any rendering) -->
 <script>
     (function () {
-        // Instant hide
-        document.documentElement.style.visibility = 'hidden';
-        document.documentElement.style.opacity = '0';
+        var d = document.documentElement;
+        d.style.visibility = 'hidden';
+        d.style.opacity = '0';
 
+        var revealed = false;
         function showPage() {
-            document.documentElement.style.visibility = 'visible';
-            document.documentElement.style.opacity = '1';
+            if (revealed) return;
+            revealed = true;
+            d.style.visibility = 'visible';
+            d.style.opacity = '1';
         }
 
-        // Reveal when fonts are ready OR after 500ms safety timeout
+        // Reveal when fonts are ready
         if (document.fonts && document.fonts.ready) {
             document.fonts.ready.then(showPage);
         }
+        // Safety timeout - never hide longer than 500ms
         setTimeout(showPage, 500);
     })();
 </script>
 
-<!-- LAYER 2: EXTERNAL ASSETS (Preconnect & Preload) -->
+<!-- LAYER 2: EXTERNAL ASSETS -->
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -35,18 +44,20 @@
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
 
-<!-- PRELOAD Full CSS CDN (Non-blocking backup) -->
-<link rel="preload" href="https://cdn.jsdelivr.net/gh/brentpeluso/agency-brain-skills@main/website/dist/output.css?v=3"
+<!-- Full Tailwind CSS from CDN (Non-blocking async load) -->
+<link rel="preload" href="https://cdn.jsdelivr.net/gh/brentpeluso/agency-brain-skills@main/website/dist/output.css?v=4"
     as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript>
     <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/brentpeluso/agency-brain-skills@main/website/dist/output.css?v=3">
+        href="https://cdn.jsdelivr.net/gh/brentpeluso/agency-brain-skills@main/website/dist/output.css?v=4">
 </noscript>
 
 
-<!-- LAYER 3: CRITICAL INLINE CSS -->
+<!-- LAYER 3: INLINE CRITICAL CSS (No network request needed) -->
 <style>
-    /* 1. Brand variables & Base */
+    /* ==========================================
+       1. CSS VARIABLES & BASE FONTS
+       ========================================== */
     :root {
         --primary-navy: #142B47;
         --secondary-navy: #1B2F45;
@@ -57,9 +68,6 @@
     body,
     html {
         font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
     }
 
     h1,
@@ -71,22 +79,14 @@
     .font-display {
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
         font-weight: 700;
-        line-height: 1.1;
     }
 
-    /* 2. Critical Typography & Mobile Overrides */
-    h1 {
-        font-size: 4rem;
-    }
-
-    h2 {
-        font-size: 3rem;
-    }
-
+    /* ==========================================
+       2. MOBILE TYPOGRAPHY OVERRIDES
+       ========================================== */
     @media (max-width: 767px) {
 
         h1,
-        .text-4xl,
         .text-5xl,
         .text-6xl,
         .lg\:text-\[4rem\] {
@@ -95,26 +95,236 @@
         }
 
         h2,
-        .text-3xl {
+        .text-4xl {
             font-size: 1.75rem !important;
             line-height: 1.3 !important;
         }
 
-        .px-4,
-        .px-6,
-        .px-8 {
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
-        }
-
-        .py-16,
-        .py-24 {
-            padding-top: 3rem !important;
-            padding-bottom: 3rem !important;
+        h3,
+        .text-3xl {
+            font-size: 1.5rem !important;
         }
     }
 
-    /* 3. Logo & Navigation Fixes */
+    /* ==========================================
+       3. BRAND BACKGROUND COLORS
+       ========================================== */
+    .bg-\[\#142B47\] {
+        background-color: #142B47 !important;
+    }
+
+    .bg-\[\#142B47\]\/5 {
+        background-color: rgb(20 43 71 / 0.05) !important;
+    }
+
+    .bg-\[\#1B2F45\] {
+        background-color: #1B2F45 !important;
+    }
+
+    .bg-\[\#1B2F45\]\/20 {
+        background-color: rgb(27 47 69 / 0.2) !important;
+    }
+
+    .bg-\[\#1B2F45\]\/40 {
+        background-color: rgb(27 47 69 / 0.4) !important;
+    }
+
+    .bg-\[\#437453\] {
+        background-color: #437453 !important;
+    }
+
+    .bg-\[\#437453\]\/10 {
+        background-color: rgb(67 116 83 / 0.1) !important;
+    }
+
+    .bg-\[\#4D8B55\] {
+        background-color: #4D8B55 !important;
+    }
+
+    .bg-\[\#4D8B55\]\/10 {
+        background-color: rgb(77 139 85 / 0.1) !important;
+    }
+
+    .bg-\[\#4D8B55\]\/20 {
+        background-color: rgb(77 139 85 / 0.2) !important;
+    }
+
+    .bg-\[\#F8FAFC\] {
+        background-color: #F8FAFC !important;
+    }
+
+    /* ==========================================
+       4. BRAND TEXT COLORS
+       ========================================== */
+    .text-\[\#142B47\] {
+        color: #142B47 !important;
+    }
+
+    .text-\[\#1B2F45\] {
+        color: #1B2F45 !important;
+    }
+
+    .text-\[\#1B2F45\]\/40 {
+        color: rgb(27 47 69 / 0.4) !important;
+    }
+
+    .text-\[\#437453\] {
+        color: #437453 !important;
+    }
+
+    .text-\[\#4D8B55\] {
+        color: #4D8B55 !important;
+    }
+
+    /* ==========================================
+       5. BRAND BORDER COLORS
+       ========================================== */
+    .border-\[\#142B47\] {
+        border-color: #142B47 !important;
+    }
+
+    .border-\[\#1B2F45\] {
+        border-color: #1B2F45 !important;
+    }
+
+    .border-\[\#437453\] {
+        border-color: #437453 !important;
+    }
+
+    .border-\[\#4D8B55\] {
+        border-color: #4D8B55 !important;
+    }
+
+    .border-\[\#4D8B55\]\/20 {
+        border-color: rgb(77 139 85 / 0.2) !important;
+    }
+
+    /* ==========================================
+       6. HOVER STATES
+       ========================================== */
+    .hover\:bg-\[\#1B2F45\]:hover {
+        background-color: #1B2F45 !important;
+    }
+
+    .hover\:bg-\[\#365D42\]:hover {
+        background-color: #365D42 !important;
+    }
+
+    .hover\:bg-\[\#3d7044\]:hover {
+        background-color: #3d7044 !important;
+    }
+
+    .hover\:bg-\[\#437453\]:hover {
+        background-color: #437453 !important;
+    }
+
+    .hover\:border-\[\#142B47\]:hover {
+        border-color: #142B47 !important;
+    }
+
+    .hover\:border-\[\#1B2F45\]:hover {
+        border-color: #1B2F45 !important;
+    }
+
+    .hover\:border-\[\#4D8B55\]\/30:hover {
+        border-color: rgb(77 139 85 / 0.3) !important;
+    }
+
+    .hover\:text-\[\#142B47\]:hover {
+        color: #142B47 !important;
+    }
+
+    .hover\:text-\[\#437453\]:hover {
+        color: #437453 !important;
+    }
+
+    .hover\:shadow-\[\#4D8B55\]\/5:hover {
+        box-shadow: 0 25px 50px -12px rgb(77 139 85 / 0.05) !important;
+    }
+
+    /* ==========================================
+       7. FOCUS STATES
+       ========================================== */
+    .focus\:ring-\[\#437453\]:focus {
+        --tw-ring-color: #437453;
+    }
+
+    /* ==========================================
+       8. GROUP HOVER STATES
+       ========================================== */
+    .group:hover .group-hover\:bg-transparent {
+        background-color: transparent !important;
+    }
+
+    .group:hover .group-hover\:scale-105 {
+        transform: scale(1.05) !important;
+    }
+
+    .group:hover .group-hover\:scale-110 {
+        transform: scale(1.1) !important;
+    }
+
+    .group:hover .group-hover\:text-white {
+        color: white !important;
+    }
+
+    /* ==========================================
+       9. SHADOW COLORS
+       ========================================== */
+    .shadow-\[\#1B2F45\]\/20 {
+        box-shadow: 0 25px 50px -12px rgb(27 47 69 / 0.2) !important;
+    }
+
+    .shadow-\[\#4D8B55\]\/20 {
+        box-shadow: 0 25px 50px -12px rgb(77 139 85 / 0.2) !important;
+    }
+
+    /* ==========================================
+       10. TYPOGRAPHY UTILITIES
+       ========================================== */
+    .tracking-\[0\.2em\] {
+        letter-spacing: 0.2em !important;
+    }
+
+    .tracking-\[0\.25em\] {
+        letter-spacing: 0.25em !important;
+    }
+
+    .leading-\[1\.1\] {
+        line-height: 1.1 !important;
+    }
+
+    .text-\[10px\] {
+        font-size: 10px !important;
+    }
+
+    .text-\[4rem\],
+    .lg\:text-\[4rem\] {
+        font-size: 4rem !important;
+    }
+
+    /* ==========================================
+       11. POSITIONING UTILITIES
+       ========================================== */
+    .left-\[16\%\] {
+        left: 16% !important;
+    }
+
+    .right-\[16\%\] {
+        right: 16% !important;
+    }
+
+    .rounded-\[2rem\] {
+        border-radius: 2rem !important;
+    }
+
+    .aspect-\[4\/3\] {
+        aspect-ratio: 4/3 !important;
+    }
+
+    /* ==========================================
+       12. LOGO SIZING
+       ========================================== */
     img[src*="697185b210cc276df5ecd936.png"] {
         height: 2.5rem !important;
         width: auto !important;
@@ -127,89 +337,36 @@
         }
     }
 
+    /* ==========================================
+       13. GLASS NAV & NAV LINK ANIMATION
+       ========================================== */
     .glass-nav {
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
-        background-color: rgba(255, 255, 255, 0.9);
     }
 
-    /* 4. Essential Tailwind fallbacks (Commonly used on the site) */
-    .flex {
-        display: flex;
-    }
-
-    .grid {
-        display: grid;
-    }
-
-    .items-center {
-        align-items: center;
-    }
-
-    .justify-center {
-        justify-content: center;
-    }
-
-    .relative {
+    .nav-link {
         position: relative;
     }
 
-    .absolute {
+    .nav-link:after {
+        content: "";
+        background-color: #437453;
+        width: 0;
+        height: 2px;
+        transition: width .3s;
         position: absolute;
+        bottom: -2px;
+        left: 0;
     }
 
-    .hidden {
-        display: none;
-    }
-
-    .w-full {
+    .nav-link:hover:after {
         width: 100%;
     }
 
-    .max-w-7xl {
-        max-width: 80rem;
-    }
-
-    .mx-auto {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Backgrounds & Text Colors */
-    .bg-white {
-        background-color: #ffffff !important;
-    }
-
-    .bg-\[\#142B47\] {
-        background-color: #142B47 !important;
-    }
-
-    .bg-\[\#437453\] {
-        background-color: #437453 !important;
-    }
-
-    .text-white {
-        color: #ffffff !important;
-    }
-
-    .text-\[\#142B47\] {
-        color: #142B47 !important;
-    }
-
-    .text-\[\#437453\] {
-        color: #437453 !important;
-    }
-
-    /* Button styles */
-    .rounded-full {
-        border-radius: 9999px !important;
-    }
-
-    .shadow-xl {
-        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
-    }
-
-    /* Material Symbols settings */
+    /* ==========================================
+       14. MATERIAL SYMBOLS
+       ========================================== */
     .material-symbols-outlined {
         font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
     }
